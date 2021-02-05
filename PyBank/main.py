@@ -25,7 +25,7 @@ import csv
 
 # make the place for the csv file for PyBank
 
-PyBankcsv = os.path.join("Resources/budget_data.csv")
+PyBankcsv = os.path.join("./Resources/budget_data.csv")
 
 # Make a place for the data
 
