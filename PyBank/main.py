@@ -25,7 +25,7 @@ import csv
 
 # make the place for the csv file for PyBank
 
-PyBankcsv = os.path.join("Resources", "budget_csv.csv")
+PyBankcsv = os.path.join("Resources/budget_csv.csv")
 
 # Make a place for the data
 
@@ -41,4 +41,4 @@ total_change_profits = 0
 count = 0
 
 # Open csv
-with open(PyBankcsv) as Bank_file
+with open(PyBankcsv) as Bank_file:
