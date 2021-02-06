@@ -32,6 +32,10 @@ writeFile = "./Analysis/Analysis.txt"
 
 # Make a place for the data
 
+
+# The total number of months included in the dataset
+months = 0
+
 profit = []
 monthly_changes = []
 date = []
@@ -41,8 +45,12 @@ date = []
 initial_profit = 0
 total_profit = 0
 total_change_profits = 0
+months = 0
 count = 0
 
 
 #
-with open(PyBankcsv) as csvfile:
+with open(readFile) as csvfile:
+
+ # read the csvfile and store it in info
+    info = csv.reader(csvfile, delimiter=",")
