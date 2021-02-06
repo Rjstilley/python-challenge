@@ -40,7 +40,6 @@ writeFile = "./Analysis/Analysis.txt"
 months = 0
 
 profit = []
-monthly_changes = []
 date = []
 
 
@@ -57,5 +56,11 @@ with open(readFile) as csvfile:
 
  # read the csvfile and store it in info
     info = csv.reader(csvfile, delimiter=",")
+    header = next(info)
     for row in info:
-        print(row)
+        # print(row)
+
+        profit.append(int(row[1]))
+        date.append(row[0])
+print(profit)
+print(date)
