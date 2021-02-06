@@ -22,6 +22,8 @@
 # Import both the os and csv
 import os
 import csv
+
+# specify the directory
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # make the place for the csv file for PyBank
@@ -55,4 +57,5 @@ with open(readFile) as csvfile:
 
  # read the csvfile and store it in info
     info = csv.reader(csvfile, delimiter=",")
-    print(info)
+    for row in info:
+        print(row)
