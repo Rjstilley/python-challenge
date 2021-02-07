@@ -80,26 +80,3 @@ with open(readFile) as csvfile:
     print(f"incProfit{(incDate)}{incProfit}")
     print(f"totalmonth:{count}")
     print(f"avgChng:{round(avgChng,2)}")
-
-
-# total_months = total_months + [1]
-# date = A[0]
-# profit = float(A[1])
-# print(profit)
-# print(date)
-# print(f"total_months:{total_months}")
-
-# write to file
-
-# with open(writeFile, "w") as text:
-# text.write()
-# for p in profit:
-# text.write(str(p))
-# add a new line character to start a new line
-# text.write("\n")
-# length of list
-# Total Momths included in data set
-#
-# print(f"total_months:{total_months}")
-# add up all of the profit column
-#
