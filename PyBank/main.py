@@ -29,10 +29,10 @@ readFile = os.path.join("Resources/budget_data.csv")
 
 # make the place for the csv file for PyBank
 
-#PyBankcsv = os.path.join("./Resources/budget_data.csv")
+# PyBankcsv = os.path.join("./Resources/budget_data.csv")
 
-#readFile = "./Resources/budget_data.csv"
-#writeFile = "./Analysis/Analysis.txt"
+# readFile = "./Resources/budget_data.csv"
+# writeFile = "./Analysis/Analysis.txt"
 
 # Make a place for the data
 
@@ -67,16 +67,24 @@ with open(readFile) as csvfile:
     for C in range(1, len(profit)):
         total_change_profits.append(int(profit[C]) - int(profit[C - 1]))
 
-# Create Variables
-decProfit = min(total_change_profits)
-incProfit = max(total_change_profits)
-decDate = date[total_change_profits.index(decProfit) + 1]
-incDate = date[total_change_profits.index(incProfit) + 1]
-avgChng = sum(total_change_profits) / len(total_change_profits)
+    # Create Variables
+    decProfit = min(total_change_profits)
+    incProfit = max(total_change_profits)
+    decDate = date[total_change_profits.index(decProfit) + 1]
+    incDate = date[total_change_profits.index(incProfit) + 1]
+    avgChng = sum(total_change_profits) / len(total_change_profits)
 
-#total_months = total_months + [1]
-#date = A[0]
-#profit = float(A[1])
+    # Print out profits and sums
+    print(f"totalprofit:{total_profit}")
+    print(f"decProfit{(decDate)}{decProfit}")
+    print(f"incProfit{(incDate)}{incProfit}")
+    print(f"totalmonth:{count}")
+    print(f"avgChng:{round(avgChng,2)}")
+
+
+# total_months = total_months + [1]
+# date = A[0]
+# profit = float(A[1])
 # print(profit)
 # print(date)
 # print(f"total_months:{total_months}")
