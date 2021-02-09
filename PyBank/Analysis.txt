@@ -1,0 +1,5 @@
+totalprofit: 38382578
+decProfit Sep-2013 -2196167
+incProfit Feb-2012 1926159
+totalmonth: 86
+avgChng: -2315.12

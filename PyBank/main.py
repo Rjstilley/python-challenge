@@ -1,6 +1,4 @@
-# The total number of months included in the dataset
-
-
+# The total number of months included in the datase
 # The net total amount of "Profit/Losses" over the entire period
 
 
@@ -24,15 +22,16 @@ import os
 import csv
 
 # specify the directory
-# os.chdir(os.path.dirname(os.path.abspath(__file__)))
-readFile = os.path.join("Resources/budget_data.csv")
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+readFile = "./Resources/budget_data.csv"
+#writeFile = "./Analysis/Analysis.txt"
 
 # make the place for the csv file for PyBank
 
 # PyBankcsv = os.path.join("./Resources/budget_data.csv")
 
 # readFile = "./Resources/budget_data.csv"
-# writeFile = "./Analysis/Analysis.txt"
+writeFile = "./Analysis/Analysis.txt"
 
 # Make a place for the data
 
@@ -80,3 +79,12 @@ with open(readFile) as csvfile:
     print(f"incProfit{(incDate)}{incProfit}")
     print(f"totalmonth:{count}")
     print(f"avgChng:{round(avgChng,2)}")
+
+# Write out results in analysis file
+with open('Analysis.txt', 'w') as text:
+
+    text.write(f"totalprofit: {total_profit}\n")
+    text.write(f"decProfit {(decDate)} {decProfit}\n")
+    text.write(f"incProfit {(incDate)} {incProfit}\n")
+    text.write(f"totalmonth: {count}\n")
+    text.write(f"avgChng: {round(avgChng,2)}\n")
