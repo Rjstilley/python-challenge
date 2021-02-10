@@ -28,13 +28,7 @@ readFile = "./Resources/budget_data.csv"
 
 # make the place for the csv file for PyBank
 
-# PyBankcsv = os.path.join("./Resources/budget_data.csv")
-
-# readFile = "./Resources/budget_data.csv"
 writeFile = "./Analysis/Analysis.txt"
-
-# Make a place for the data
-
 
 # The total number of months included in the dataset
 profit = []
@@ -74,6 +68,8 @@ with open(readFile) as csvfile:
     avgChng = sum(total_change_profits) / len(total_change_profits)
 
     # Print out profits and sums
+    print(f"Financial Analysis")
+    print("-------------------------")
     print(f"totalprofit:{total_profit}")
     print(f"decProfit{(decDate)}{decProfit}")
     print(f"incProfit{(incDate)}{incProfit}")
@@ -82,9 +78,10 @@ with open(readFile) as csvfile:
 
 # Write out results in analysis file
 with open('Analysis.txt', 'w') as text:
-
-    text.write(f"totalprofit: {total_profit}\n")
-    text.write(f"decProfit {(decDate)} {decProfit}\n")
-    text.write(f"incProfit {(incDate)} {incProfit}\n")
-    text.write(f"totalmonth: {count}\n")
-    text.write(f"avgChng: {round(avgChng,2)}\n")
+    text.write(f" Finacial Analysis\n")
+    text.write("-------------------------\n")
+    text.write(f"Total Profit: {total_profit}\n")
+    text.write(f"Profit Decreased {(decDate)} {decProfit}\n")
+    text.write(f"Profit Increased {(incDate)} {incProfit}\n")
+    text.write(f"Total Months: {count}\n")
+    text.write(f"Average Change: {round(avgChng,2)}\n")
